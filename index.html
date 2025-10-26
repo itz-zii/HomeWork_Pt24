@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="./images/282599.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+DE+SAS:wght@100..400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+        li {
+            border: 2px solid #8758ff;
+        }
+    </style>
+</head>
+<body class="h-screen bg-[#8758ff] text-white">
+    <div class="w-full h-auto flex justify-center">
+    <div class="bg-gray-900 w-auto h-auto p-8 m-20 rounded-lg shadow-2xl">
+        <h1 class="text-3xl text-center mb-8">Get Things Done !</h1>
+        <form class="rounded-lg w-89 flex mb-5 border-[#8758ff] border-2">
+        <input type="text" id="todoInput" class="todo-input w-61 border-0 focus:outline-none focus:ring-0 p-4" placeholder="What is the task today?">
+        <button id="addBtn" class="add-btn p-4 cursor-pointer w-27 bg-[#8758ff]">Add Task</button>
+        </form>
+        <ul id="todoList" class="todo-list list-none rounded-lg"></ul>
+        <div id="pagination" class="pagination"></div>
+    </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
