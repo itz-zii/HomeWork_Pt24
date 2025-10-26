@@ -8,10 +8,13 @@ addBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   const task = todoInput.value.trim();
-  if (task === "") return;
+  if (task === "") {
+    alert("Hãy thêm task mới vào danh sách");
+    return;
+  }
 
   if (todos.includes(task)) {
-    alert("Task này đã tồn tại!");
+    alert("Task này đã tồn tại");
     return;
   }
 
@@ -73,7 +76,7 @@ function convertToForm(index, currentTask) {
 
   const saveBtn = document.createElement("button");
   saveBtn.textContent = "Add Task";
-  saveBtn.className = "add-btn p-4 cursor-pointer w-27 bg-[#8758ff]";
+  saveBtn.className = "add-btn p-3 cursor-pointer w-27 bg-[#8758ff]";
 
   form.appendChild(input);
   form.appendChild(saveBtn);
@@ -83,10 +86,14 @@ function convertToForm(index, currentTask) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const newValue = input.value.trim();
-    if (newValue === "") return;
+
+    if (newValue === "") {
+      alert("Bạn chưa sửa task này");
+      return;
+    }
 
     if (todos.includes(newValue) && newValue !== currentTask) {
-      alert("Task này đã tồn tại!");
+      alert("Task này đã tồn tại");
       return;
     }
 
