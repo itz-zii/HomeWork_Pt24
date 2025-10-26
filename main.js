@@ -29,7 +29,7 @@ function renderTodos() {
   todos.forEach((task, index) => {
     const li = document.createElement("li");
     li.className =
-      "flex justify-between items-center p-4 mb-3 rounded-lg bg-[#8758ff]";
+      "flex justify-between items-center p-4 mb-2 rounded-lg bg-[#8758ff]";
 
     const span = document.createElement("span");
     span.textContent = task;
